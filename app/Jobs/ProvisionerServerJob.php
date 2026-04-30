@@ -36,14 +36,14 @@ class ProvisionerServerJob implements ShouldQueue
             '-p', $this->server->port . ':25565',
             
             // Limit Resource Docker (Sangat disarankan untuk AWS t2.micro/t3.micro)
-            '-m', '450m',                 // Batas RAM sistem
+            '-m', '1g',                 // Batas RAM sistem
             '--cpus', '0.5',              // Batas CPU (50%)
             
             // Environment Variables Minecraft
             '-e', 'EULA=TRUE',            // Menyetujui EULA Mojang
             '-e', 'VERSION=1.21.11',      // Mengunci versi ke 1.21.11
             '-e', 'TYPE=VANILLA',         // Server Vanilla murni
-            '-e', 'MEMORY=450M',          // Limit RAM di level Java
+            '-e', 'MEMORY=1G',          // Limit RAM di level Java
             '-e', 'ONLINE_MODE=FALSE',    // Izinkan Legacy Launcher / Non-Premium
             
             'itzg/minecraft-server'
