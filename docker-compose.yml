@@ -15,8 +15,8 @@ services:
   mysql-db:
     image: mysql:8.0
     environment:
-      - MYSQL_DATABASE=saas_minecraft
-      - MYSQL_ROOT_PASSWORD=rahasia123
+      - MYSQL_DATABASE=adminasli
+      - MYSQL_ROOT_PASSWORD=akuadminlmao
     volumes:
       - db_data:/var/lib/mysql
 
