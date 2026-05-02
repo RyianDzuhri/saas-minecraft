@@ -65,7 +65,7 @@ class ProvisionerServerJob implements ShouldQueue
         $this->server->update([
             'status' => 'active',
             'container_id' => substr($containerId, 0, 12),
-            'ip' => env('SERVER_PUBLIC_IP'),
+            'ip' => config('app.server_public_ip'),
         ]);
 
         Log::info('Minecraft Server Active! ID Kontainer: ' . $containerId);
