@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>SigmaServer - Server Minecraft Cepat & Andal</title>
+        <title>SigmaServer - The best place to create your own server</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -206,9 +206,9 @@
                     @auth
                         <a href="{{ url('/dashboard') }}" class="btn btn-outline">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="btn btn-outline">Masuk</a>
+                        <a href="{{ route('login') }}" class="btn btn-outline">Login</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="btn btn-primary">Mulai sekarang</a>
+                            <a href="{{ route('register') }}" class="btn btn-primary">Create Now!</a>
                         @endif
                     @endauth
                 @endif
@@ -221,12 +221,11 @@
                 99.9% uptime · Server Indonesia
             </div>
 
-            <h1>Server Minecraft yang <span class="highlight">cepat & andal.</span></h1>
+            <h1>Minecraft server <span class="highlight">fast & easy.</span></h1>
             
             <p class="description">
-                Sewa server Minecraft berkualitas tinggi dengan performa lag-free, 
-                setup instan, dan support 24/7. Cocok untuk semua mode — Survival, 
-                SkyBlock, hingga minigames.
+                Create Minecraft server with high-quality and lag-free, 
+                instant setup, support 24/7. Best to start Your own SMP with your friends!
             </p>
 
             <div class="hero-actions">
@@ -235,7 +234,7 @@
                     Mulai sekarang
                 </a>
                 
-                <span class="price-info">Mulai dari Rp 10.000/bln</span>
+                <span class="price-info">Start from Rp 10.000/Month</span>
 
                 <div class="scroll-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
