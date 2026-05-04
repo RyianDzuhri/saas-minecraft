@@ -55,15 +55,20 @@
                 font-size: 1.5rem;
             }
 
-            .logo-icon {
+            .sg-brand-icon {
                 width: 40px;
                 height: 40px;
-                background-color: var(--primary-green);
-                border-radius: 8px;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                padding: 8px;
-                gap: 4px;
+                border-radius: 10px;
+                overflow: hidden;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sg-brand-icon img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
 
             .logo-dot {
@@ -192,11 +197,8 @@
     <body>
         <header>
             <div class="logo-container">
-                <div class="logo-icon">
-                    <div class="logo-dot"></div>
-                    <div class="logo-dot"></div>
-                    <div class="logo-dot"></div>
-                    <div class="logo-dot"></div>
+                <div class="sg-brand-icon">
+                    <img src="{{ asset('logo.png') }}" alt="Logo">
                 </div>
                 SigmaServer
             </div>

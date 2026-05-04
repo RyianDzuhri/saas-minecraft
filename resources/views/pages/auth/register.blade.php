@@ -37,7 +37,8 @@
             align-items: center;
             justify-content: center;
             padding: 2rem;
-            overflow-y: auto; /* Jaga-jaga kalau layar pendek, form tetap bisa diakses */
+            overflow: hidden;
+        
         }
 
         /* Dekorasi Cahaya */
@@ -73,6 +74,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
         .sigma-brand-icon svg { width: 24px; height: 24px; stroke: #052e16; fill: none; stroke-width: 2.5; }
         .sigma-brand-name { font-size: 24px; font-weight: 900; color: #ffffff; letter-spacing: -0.03em; }
@@ -97,7 +99,7 @@
         .sigma-subtitle { color: #666; font-size: 16px; max-width: 420px; line-height: 1.6; }
 
         /* Form Styling (Big Inputs) */
-        .sigma-form { display: flex; flex-direction: column; gap: 1.2rem; }
+        .sigma-form { display: flex; flex-direction: column; gap: 0.8rem; }
         .sigma-label { font-size: 12px; font-weight: 600; color: #555; text-transform: uppercase; font-family: 'JetBrains Mono'; margin-bottom: 2px; }
         
         .sigma-input { 
@@ -105,9 +107,9 @@
             background: #181818; 
             border: 1px solid #222; 
             border-radius: 14px;
-            padding: 16px 20px; 
+            padding: 12px 14px; 
             color: #fff; 
-            font-size: 16px; 
+            font-size: 14px; 
             outline: none; 
             transition: 0.2s;
             box-sizing: border-box;
@@ -136,13 +138,8 @@
         <div class="sigma-hero-side">
             <div class="sigma-brand">
                 <div class="sigma-brand-icon">
-                    <svg viewBox="0 0 20 20">
-                        <rect x="2" y="2" width="7" height="7" rx="1.5"/>
-                        <rect x="11" y="2" width="7" height="7" rx="1.5"/>
-                        <rect x="2" y="11" width="7" height="7" rx="1.5"/>
-                        <rect x="11" y="11" width="7" height="7" rx="1.5"/>
-                    </svg>
-                </div>
+                <img src="{{ asset('logo.png') }}" alt="Logo">
+            </div>
                 <div class="sigma-brand-name">Sigma<span>Server</span></div>
             </div>
 
@@ -157,7 +154,7 @@
         <!-- Sisi Kanan: Form Register -->
         <div class="sigma-form-side">
             <div class="sigma-card">
-                <div style="margin-bottom: 2rem;">
+                <div style="margin-bottom: 1rem;">
                     <h2 style="color: #fff; font-size: 28px; font-weight: 900; margin-bottom: 0.5rem;">Buat Akun Baru</h2>
                     <p style="color: #555; font-size: 15px;">Lengkapi data diri kamu untuk mulai menyewa server.</p>
                 </div>

@@ -45,7 +45,7 @@
             }
             .sg-brand-icon {
                 width: 32px; height: 32px; background: #22ff72;
-                border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+                border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;overflow: hidden;
             }
             .sg-brand-icon svg { width: 16px; height: 16px; stroke: #052e16; fill: none; stroke-width: 2; }
             .sg-brand-name { font-size: 16px; font-weight: 900; letter-spacing: -0.03em; color: #fff; }
@@ -172,12 +172,7 @@
                 <div class="sg-sidebar-header">
                     <a href="{{ route('dashboard') }}" class="sg-brand" wire:navigate>
                         <div class="sg-brand-icon">
-                            <svg viewBox="0 0 20 20">
-                                <rect x="2" y="2" width="7" height="7" rx="1.5"/>
-                                <rect x="11" y="2" width="7" height="7" rx="1.5"/>
-                                <rect x="2" y="11" width="7" height="7" rx="1.5"/>
-                                <rect x="11" y="11" width="7" height="7" rx="1.5"/>
-                            </svg>
+                            <img src="{{ asset('logo.png') }}" alt="Logo" style="width:100%; height:100%; object-fit:contain;">
                         </div>
                         <div class="sg-brand-name">Sigma<span>Server</span></div>
                     </a>

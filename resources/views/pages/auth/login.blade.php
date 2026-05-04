@@ -68,13 +68,18 @@
         .sigma-brand-icon {
             width: 42px;
             height: 42px;
-            background: #22ff72;
-            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            border-radius: 10px;
         }
-        .sigma-brand-icon svg { width: 24px; height: 24px; stroke: #052e16; fill: none; stroke-width: 2.5; }
+
+        .sigma-brand-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
         .sigma-brand-name { font-size: 24px; font-weight: 900; color: #ffffff; letter-spacing: -0.03em; }
         .sigma-brand-name span { color: #22ff72; }
 
@@ -137,12 +142,7 @@
         <div class="sigma-hero-side">
             <div class="sigma-brand">
                 <div class="sigma-brand-icon">
-                    <svg viewBox="0 0 20 20">
-                        <rect x="2" y="2" width="7" height="7" rx="1.5"/>
-                        <rect x="11" y="2" width="7" height="7" rx="1.5"/>
-                        <rect x="2" y="11" width="7" height="7" rx="1.5"/>
-                        <rect x="11" y="11" width="7" height="7" rx="1.5"/>
-                    </svg>
+                    <img src="{{ asset('logo.png') }}" alt="Logo">
                 </div>
                 <div class="sigma-brand-name">Sigma<span>Server</span></div>
             </div>
