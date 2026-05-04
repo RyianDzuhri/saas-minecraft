@@ -7,7 +7,7 @@
             background: #0a0a0a;
             font-family: 'Inter', sans-serif;
             color: #fff;
-            padding: 2rem 2.5rem;
+            padding: 0.5rem 2.5rem;
         }
 
         /* ── HEADER ── */
