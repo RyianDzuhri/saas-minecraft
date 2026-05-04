@@ -151,16 +151,16 @@
                 <div class="sigma-tag-dot"></div>
                 High Performance Server
             </div>
-            <h1 class="sigma-title">Kelola Server<br>Tanpa Batas.</h1>
-            <p class="sigma-subtitle">Masuk untuk mengakses dashboard kontrol panel, statistik server, dan manajemen plugin Anda secara instan.</p>
+            <h1 class="sigma-title">Manage Server<br>Without Limit.</h1>
+            <p class="sigma-subtitle">Login to access dashboard control panel, statistic server, and manage your plugin instantly.</p>
         </div>
 
         <!-- Sisi Kanan: 50% -->
         <div class="sigma-form-side">
             <div class="sigma-card">
                 <div style="margin-bottom: 2.5rem;">
-                    <h2 style="color: #fff; font-size: 28px; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Selamat Datang Kembali</h2>
-                    <p style="color: #555; font-size: 15px;">Masukkan detail akun Anda di bawah ini.</p>
+                    <h2 style="color: #fff; font-size: 28px; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Welcome Back</h2>
+                    <p style="color: #555; font-size: 15px;">Input your account detail below.</p>
                 </div>
 
                 <form method="POST" action="{{ route('login.store') }}" class="sigma-form">
@@ -188,17 +188,17 @@
 
                     <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
                         <input id="remember" type="checkbox" name="remember" style="accent-color: #22ff72; width: 16px; height: 16px;">
-                        <label for="remember" style="color: #666; font-size: 14px; cursor: pointer;">Ingat saya di perangkat ini</label>
+                        <label for="remember" style="color: #666; font-size: 14px; cursor: pointer;">Remember me</label>
                     </div>
 
                     <button type="submit" class="sigma-submit">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        Masuk ke Dashboard
+                        Go to Dashboard
                     </button>
                 </form>
 
                 <div class="sigma-footer">
-                    Belum punya akun? <a href="{{ route('register') }}" wire:navigate>Daftar sekarang</a>
+                    Don't have account? <a href="{{ route('register') }}" wire:navigate>Register Now</a>
                 </div>
             </div>
         </div>

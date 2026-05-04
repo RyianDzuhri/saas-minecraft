@@ -200,14 +200,14 @@
 
                     {{-- Bantuan --}}
                     <div>
-                        <div class="sg-nav-label">Bantuan</div>
+                        <div class="sg-nav-label">Help</div>
                         <a href="https://github.com/laravel/livewire-starter-kit" target="_blank" class="sg-nav-item">
                             <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
                             Repository
                         </a>
                         <a href="https://laravel.com/docs/starter-kits#livewire" target="_blank" class="sg-nav-item">
                             <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                            Dokumentasi
+                            Documentation
                         </a>
                     </div>
                 </nav>
@@ -232,7 +232,7 @@
                             @csrf
                             <button type="submit" class="sg-btn-logout" data-test="logout-button">
                                 <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
-                                Keluar
+                                Logout
                             </button>
                         </form>
                     </div>
@@ -287,14 +287,14 @@
                     </div>
                     <div class="sg-nav-spacer"></div>
                     <div>
-                        <div class="sg-nav-label">Bantuan</div>
+                        <div class="sg-nav-label">Help</div>
                         <a href="https://github.com/laravel/livewire-starter-kit" target="_blank" class="sg-nav-item">
                             <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
                             Repository
                         </a>
                         <a href="https://laravel.com/docs/starter-kits#livewire" target="_blank" class="sg-nav-item">
                             <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                            Dokumentasi
+                            Documentation
                         </a>
                     </div>
                 </nav>
@@ -317,7 +317,7 @@
                             @csrf
                             <button type="submit" class="sg-btn-logout">
                                 <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
-                                Keluar
+                                Logout
                             </button>
                         </form>
                     </div>

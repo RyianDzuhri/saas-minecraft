@@ -210,7 +210,7 @@
                     @else
                         <a href="{{ route('login') }}" class="btn btn-outline">Login</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="btn btn-primary">Create Now!</a>
+                            <a href="{{ route('register') }}" class="btn btn-primary">Register Now</a>
                         @endif
                     @endauth
                 @endif
@@ -233,7 +233,7 @@
             <div class="hero-actions">
                 <a href="{{ route('register') }}" class="btn btn-primary" style="display: flex; align-items: center; gap: 10px;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    Mulai sekarang
+                    Create Now!
                 </a>
                 
                 <span class="price-info">Start from Rp 10.000/Month</span>

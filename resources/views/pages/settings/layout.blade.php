@@ -109,27 +109,27 @@
 
     {{-- ── LEFT NAV ── --}}
     <nav class="sg-settings-nav">
-        <div class="sg-settings-nav-label">Pengaturan</div>
+        <div class="sg-settings-nav-label">Settings</div>
 
         <a href="{{ route('profile.edit') }}"
            class="sg-settings-nav-item {{ request()->routeIs('profile.edit') ? 'active' : '' }}"
            wire:navigate>
             <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            Profil
+            Profile
         </a>
 
         <a href="{{ route('security.edit') }}"
            class="sg-settings-nav-item {{ request()->routeIs('security.edit') ? 'active' : '' }}"
            wire:navigate>
             <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            Keamanan
+            Safe
         </a>
 
         <a href="{{ route('appearance.edit') }}"
            class="sg-settings-nav-item {{ request()->routeIs('appearance.edit') ? 'active' : '' }}"
            wire:navigate>
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 3a4.5 4.5 0 010 9 4.5 4.5 0 010-9z"/><path stroke-linecap="round" d="M6.3 17.7a9 9 0 0111.4 0"/></svg>
-            Tampilan
+            UI
         </a>
     </nav>
 

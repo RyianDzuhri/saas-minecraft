@@ -174,7 +174,7 @@
 
     <div class="sg-wrap">
 
-        {{-- ── HEADER ── --}}
+        {{-- HEADER --}}
         <div class="sg-header">
             <div class="sg-header-brand">
                 <div class="sg-logo-icon">
@@ -189,7 +189,7 @@
 
             <div class="sg-header-right">
                 <div class="sg-greeting">
-                    Halo, <strong>{{ auth()->user()->name }}</strong>
+                    Hello, <strong>{{ auth()->user()->name }}</strong>
                 </div>
                 <a href="{{ route('servers.index') }}" class="sg-btn-new">
                     <svg viewBox="0 0 14 14"><line x1="7" y1="2" x2="7" y2="12"/><line x1="2" y1="7" x2="12" y2="7"/></svg>
@@ -198,118 +198,40 @@
             </div>
         </div>
 
-        {{-- ── PAGE TITLE ── --}}
+        {{-- PAGE TITLE --}}
         <div class="sg-page-head">
             <div class="sg-tag">
                 <div class="sg-tag-dot"></div>
-                Panel kontrol · Real-time
+                Control Panel · Real-time
             </div>
             <h1 class="sg-page-title">Dashboard<span>.</span></h1>
-            <p class="sg-page-sub">Pantau dan kelola semua server Minecraft kamu dari sini.</p>
+            <p class="sg-page-sub">Monitor and manage all your Minecraft servers here.</p>
         </div>
 
-        {{-- ── STAT CARDS ── --}}
+        {{-- STATS --}}
         <div class="sg-stats">
             <div class="sg-stat-card">
-                <div class="sg-stat-icon blue">
-                    <svg viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
-                    </svg>
-                </div>
+                <div class="sg-stat-icon blue"></div>
                 <div>
-                    <div class="sg-stat-label">Total Server</div>
+                    <div class="sg-stat-label">Total Servers</div>
                     <div class="sg-stat-value">{{ auth()->user()->servers()->count() }}</div>
                 </div>
             </div>
 
             <div class="sg-stat-card">
-                <div class="sg-stat-icon green">
-                    <svg viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
+                <div class="sg-stat-icon green"></div>
                 <div>
-                    <div class="sg-stat-label">Server Aktif</div>
+                    <div class="sg-stat-label">Active Servers</div>
                     <div class="sg-stat-value">{{ auth()->user()->servers()->where('status','active')->count() }}</div>
                 </div>
             </div>
 
             <div class="sg-stat-card">
-                <div class="sg-stat-icon yellow">
-                    <svg viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
+                <div class="sg-stat-icon yellow"></div>
                 <div>
-                    <div class="sg-stat-label">Pending / Provisioning</div>
+                    <div class="sg-stat-label">Pending</div>
                     <div class="sg-stat-value">{{ auth()->user()->servers()->whereIn('status',['pending','provisioning'])->count() }}</div>
                 </div>
-            </div>
-        </div>
-
-        {{-- ── RECENT SERVERS TABLE ── --}}
-        <div class="sg-table-card">
-            <div class="sg-table-head">
-                <div class="sg-table-title">Server Terbaru</div>
-                <div class="sg-table-count">Menampilkan 5 terakhir</div>
-            </div>
-
-            <div class="sg-table-wrap">
-                <table class="sg-table">
-                    <thead>
-                        <tr>
-                            <th>Nama Server</th>
-                            <th>Alamat / IP</th>
-                            <th class="center">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse(auth()->user()->servers()->latest()->take(5)->get() as $server)
-                            <tr>
-                                <td class="name">{{ $server->name }}</td>
-                                <td class="addr">{{ $server->ip ?? '127.0.0.1' }}:{{ $server->port }}</td>
-                                <td class="status-cell">
-                                    @if($server->status === 'active')
-                                        <span class="sg-badge active">
-                                            <span class="sg-badge-dot"></span>
-                                            Active
-                                        </span>
-                                    @elseif(in_array($server->status, ['pending','provisioning']))
-                                        <span class="sg-badge pending">
-                                            <span class="sg-badge-dot"></span>
-                                            {{ ucfirst($server->status) }}
-                                        </span>
-                                    @else
-                                        <span class="sg-badge other">
-                                            <span class="sg-badge-dot"></span>
-                                            {{ ucfirst($server->status) }}
-                                        </span>
-                                    @endif
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="3" style="padding:0">
-                                    <div class="sg-empty">
-                                        <div class="sg-empty-icon">
-                                            <svg viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/>
-                                            </svg>
-                                        </div>
-                                        <div class="sg-empty-title">Belum ada server</div>
-                                        <div class="sg-empty-sub">Klik "New Server" untuk membuat server pertamamu.</div>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="sg-table-foot">
-                <a href="{{ route('servers.index') }}" class="sg-view-all">
-                    Lihat semua server →
-                </a>
             </div>
         </div>
 
