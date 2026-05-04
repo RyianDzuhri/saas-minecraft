@@ -12,7 +12,7 @@ class CheckPayments extends Command
 
     public function handle()
     {
-        $apiKey = env('XENDIT_SECRET_KEY');
+        $apiKey = config('services.xendit.secret_key');
 
         $response = Http::withBasicAuth($apiKey, '')
             ->get('https://api.xendit.co/v2/invoices');
