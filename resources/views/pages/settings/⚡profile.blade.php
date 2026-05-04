@@ -198,14 +198,14 @@ new #[Title('Profile settings')] class extends Component {
     @include('partials.settings-heading')
 
     <x-pages::settings.layout
-        :heading="__('Profil')"
-        :subheading="__('Perbarui nama dan alamat email kamu')">
+        :heading="__('Profile')"
+        :subheading="__('Change your name and your email')">
 
         <form wire:submit="updateProfileInformation" style="display:flex;flex-direction:column;gap:16px;margin-top:1.5rem">
 
             {{-- Name --}}
             <div class="sg-field">
-                <label class="sg-label" for="sg-name">Nama</label>
+                <label class="sg-label" for="sg-name">Name</label>
                 <input
                     id="sg-name"
                     class="sg-input"
@@ -214,7 +214,7 @@ new #[Title('Profile settings')] class extends Component {
                     required
                     autofocus
                     autocomplete="name"
-                    placeholder="Nama lengkap"
+                    placeholder="Full-Name"
                 />
                 @error('name')
                     <span style="font-size:11px;color:#f87171;font-family:'JetBrains Mono',monospace">{{ $message }}</span>
@@ -241,9 +241,9 @@ new #[Title('Profile settings')] class extends Component {
                     <div class="sg-notice">
                         <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
                         <div class="sg-notice-text">
-                            Email kamu belum diverifikasi.
+                            Your email hasn't verified yet.
                             <button type="button" class="sg-notice-link" wire:click.prevent="resendVerificationNotification">
-                                Kirim ulang email verifikasi.
+                                Resend verification email.
                             </button>
                         </div>
                     </div>
@@ -254,7 +254,7 @@ new #[Title('Profile settings')] class extends Component {
             <div style="padding-top:4px">
                 <button type="submit" class="sg-btn-save" data-test="update-profile-button">
                     <svg viewBox="0 0 14 14"><polyline points="2,7 5,10 12,3"/></svg>
-                    Simpan perubahan
+                   Save Changes
                 </button>
             </div>
 
@@ -266,10 +266,10 @@ new #[Title('Profile settings')] class extends Component {
             <div class="sg-danger-zone">
                 <div class="sg-danger-title">
                     <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
-                    Peringatan
+                   WARNING
                 </div>
                 <div class="sg-danger-desc">
-                    Tindakan di bawah ini bersifat permanen dan tidak dapat dibatalkan.
+                    This action below is permanent and cannot be changed after.
                 </div>
                 <livewire:pages::settings.delete-user-form />
             </div>
