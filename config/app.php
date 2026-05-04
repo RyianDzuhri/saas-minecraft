@@ -125,4 +125,9 @@ return [
 
     'server_public_ip' => env('SERVER_PUBLIC_IP'),
 
+    'xendit' => [
+        'secret_key' => env('XENDIT_SECRET_KEY'),
+        'public_key' => env('XENDIT_PUBLIC_KEY'),
+    ],
+
 ];
